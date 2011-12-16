@@ -1,85 +1,247 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>ishmaelx/syre @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #81ff38;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #7e00c7; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #7e00c7; }
-    h3 { text-align: center; color: #7e00c7; }
-    a { color: #7e00c7; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>.cß3test</title>
+    <style>
+body { 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #666;
+    background: rgba(31,31,31,1.0);
+}
+#container {
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #aaa;
+    background: rgba(0,0,0,1.0);
+    background-image: -webkit-linear-gradient(bottom, rgb(150,220,46) 10%, rgb(0,0,0) 80%);
+    background-image: -moz-linear-gradient(bottom, rgb(150,220,46) 10%, rgb(0,0,0) 80%);
+    background-image: -ms-linear-gradient(bottom, rgb(150,220,46) 10%, rgb(0,0,0) 80%);
+    background-image: -o-linear-gradient(bottom, rgb(150,220,46) 10%, rgb(0,0,0) 80%);
+    background-image: linear-gradient(bottom, rgb(150,220,46) 10%, rgb(0,0,0) 80%);
+}
+.wave {
+    left: -20px;
+    width: 360px;
+    height: 120px;
+  text-align: center;
+}
+#wave_one {
+    position: inherit;
+    bottom: -28px;
+    background: #bbb;
+    background: rgba(0,255,63,0.6);
+    -webkit-box-shadow: 0px 0px 4px rgba(200,255,120,0.6);
+    -moz-box-shadow: 0px 0px 4px rgba(200,255,120,0.6);
+    -ms-box-shadow: 0px 0px 4px rgba(200,255,120,0.6);
+    -o-box-shadow: 0px 0px 4px rgba(200,255,120,0.6);
+    box-shadow: 0px 0px 4px rgba(200,255,120,0.6);
+    -webkit-animation: waveroll 8s ease-in-out infinite;
+    -moz-animation: waveroll 8s ease-in-out infinite;
+    -ms-animation: waveroll 8s ease-in-out infinite;
+    -o-animation: waveroll 8s ease-in-out infinite;
+    animation: waveroll 8s ease-in-out infinite;
+}
+#wave_two {
+    background: rgba(0,255,31,0.4);
+    position: inherit;
+    bottom: -26px;
+    background: #ccc;
+    background: rgba(0,255,31,0.4);
+    -webkit-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -moz-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -ms-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -o-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -webkit-animation: waveroll 7s ease-in-out infinite;
+    -moz-animation: waveroll 7s ease-in-out infinite;
+    -ms-animation: waveroll 7s ease-in-out infinite;
+    -o-animation: waveroll 7s ease-in-out infinite;
+    animation: waveroll 7s ease-in-out infinite;
+}
+#wave_three {
+    position: inherit;
+    bottom: -24px;
+    background: #ddd;
+    background: rgba(0,255,15,0.2);
+    -webkit-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -moz-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -ms-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -o-box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    box-shadow: 0px 0px 4px rgba(200,255,120,0.4);
+    -webkit-animation: waveroll 6s ease-in-out infinite;
+    -moz-animation: waveroll 6s ease-in-out infinite;
+    -ms-animation: waveroll 6s ease-in-out infinite;
+    -o-animation: waveroll 6s ease-in-out infinite;
+    animation: waveroll 6s ease-in-out infinite;
+}
+#message {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -60px;
+    -webkit-transform:  translate(0px, -50px) rotate(30deg) scale(0.8);
+    -moz-transform:     translate(0px, -50px) rotate(30deg) scale(0.8);
+    -ms-transform:      translate(0px, -50px) rotate(30deg) scale(0.8);
+    -o-transform:       translate(0px, -50px) rotate(30deg) scale(0.8);
+    transform:          translate(0px, -50px) rotate(30deg) scale(0.8);
+    -webkit-animation:  submerge 5s 0s ease-out 1 normal forwards, float 10s 5.1s ease-in-out infinite alternate none;
+    -moz-animation:     submerge 5s 0s ease-out 1 normal forwards, float 10s 5.1s ease-in-out infinite alternate none;
+    -ms-animation:      submerge 5s 0s ease-out 1 normal forwards, float 10s 5.1s ease-in-out infinite alternate none;
+    -o-animation:       submerge 5s 0s ease-out 1 normal forwards, float 10s 5.1s ease-in-out infinite alternate none;
+    animation:          submerge 5s 0s ease-out 1 normal forwards, float 10s 5.1s ease-in-out infinite alternate none;
+}
+.capsule {
+    font-size: 42px;
+    font-family: arial;
+    padding: 20px;
+    background: #fff;
+    color: #f00;
+    color: rgba(150,255,0, 0.9);
+    text-shadow: rgb(0,0,0) 0px 0px 3px;
+    box-shadow: rgb(0,0,0) 0px 0px 2px;
+    border-radius: 75px;
+    background-image: -webkit-linear-gradient(bottom, rgb(127,145,127) 10%, rgb(245,255,245) 90%);
+    background-image: -moz-linear-gradient(bottom, rgb(127,145,127) 10%, rgb(245,255,245) 90%);
+    background-image: -ms-linear-gradient(bottom, rgb(127,145,127) 10%, rgb(245,255,245) 90%);
+    background-image: -o-linear-gradient(bottom, rgb(127,145,127) 10%, rgb(245,255,245) 90%);
+    background-image: linear-gradient(bottom, rgb(127,145,127) 10%, rgb(245,255,245) 90%);
+}
+@-webkit-keyframes waveroll {
+    0%      { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+    12%     { -webkit-transform: translate(-2px, -1px) rotate(1deg); }
+    25%     { -webkit-transform: translate(-3px, 0px) rotate(0deg); }
+    37%     { -webkit-transform: translate(-2px, 1px) rotate(-1deg); }
+    50%     { -webkit-transform: translate(0px, 0px) rotate(-1deg); }
+    62%     { -webkit-transform: translate(2px, -1px) rotate(-1deg); }
+    75%     { -webkit-transform: translate(3px, 0px) rotate(0deg); }
+    87%     { -webkit-transform: translate(2px, 1px) rotate(1deg); }
+    100%    { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-webkit-keyframes submerge {
+    0%      { -webkit-transform: translate(0px, 100px) rotate(45deg) scale(0.5); }
+    15%     { -webkit-transform: translate(0px, -125px) rotate(-1deg) scale(1.03); }
+    35%     { -webkit-transform: translate(0px, -110px) rotate(2deg) scale(0.99); }
+    66%     { -webkit-transform: translate(0px, -117px) rotate(0deg) scale(1.01); }
+    100%    { -webkit-transform: translate(0px, -115px) rotate(0deg) scale(1.0); }
+}
+@-webkit-keyframes float {
+    0%      { -webkit-transform: translate(0px, -115px) rotate(0deg); }
+    33%     { -webkit-transform: translate(-5px, -110px) rotate(1deg); }
+    66%     { -webkit-transform: translate(5px, -115px) rotate(-1deg); }
+    100%    { -webkit-transform: translate(0px, -110px) rotate(0deg); }
+}
+@-moz-keyframes waveroll {
+    0%      { -moz-transform: translate(0px, 0px) rotate(0deg); }
+    12%     { -moz-transform: translate(-2px, -1px) rotate(1deg); }
+    25%     { -moz-transform: translate(-3px, 0px) rotate(0deg); }
+    37%     { -moz-transform: translate(-2px, 1px) rotate(-1deg); }
+    50%     { -moz-transform: translate(0px, 0px) rotate(-1deg); }
+    62%     { -moz-transform: translate(2px, -1px) rotate(-1deg); }
+    75%     { -moz-transform: translate(3px, 0px) rotate(0deg); }
+    87%     { -moz-transform: translate(2px, 1px) rotate(1deg); }
+    100%    { -moz-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-moz-keyframes submerge {
+    0%      { -moz-transform: translate(0px, 100px) rotate(45deg) scale(0.5); }
+    15%     { -moz-transform: translate(0px, -125px) rotate(-1deg) scale(1.03); }
+    35%     { -moz-transform: translate(0px, -110px) rotate(2deg) scale(0.99); }
+    66%     { -moz-transform: translate(0px, -117px) rotate(0deg) scale(1.01); }
+    100%    { -moz-transform: translate(0px, -115px) rotate(0deg) scale(1.0); }
+}
+@-moz-keyframes float {
+    0%      { -moz-transform: translate(0px, -115px) rotate(0deg); }
+    33%     { -moz-transform: translate(-5px, -110px) rotate(1deg); }
+    66%     { -moz-transform: translate(5px, -115px) rotate(-1deg); }
+    100%    { -moz-transform: translate(0px, -110px) rotate(0deg); }
+}
+@-ms-keyframes waveroll {
+    0%      { -ms-transform: translate(0px, 0px) rotate(0deg); }
+    12%     { -ms-transform: translate(-2px, -1px) rotate(1deg); }
+    25%     { -ms-transform: translate(-3px, 0px) rotate(0deg); }
+    37%     { -ms-transform: translate(-2px, 1px) rotate(-1deg); }
+    50%     { -ms-transform: translate(0px, 0px) rotate(-1deg); }
+    62%     { -ms-transform: translate(2px, -1px) rotate(-1deg); }
+    75%     { -ms-transform: translate(3px, 0px) rotate(0deg); }
+    87%     { -ms-transform: translate(2px, 1px) rotate(1deg); }
+    100%    { -ms-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-ms-keyframes submerge {
+    0%      { -ms-transform: translate(0px, 100px) rotate(45deg) scale(0.5); }
+    15%     { -ms-transform: translate(0px, -125px) rotate(-1deg) scale(1.03); }
+    35%     { -ms-transform: translate(0px, -110px) rotate(2deg) scale(0.99); }
+    66%     { -ms-transform: translate(0px, -117px) rotate(0deg) scale(1.01); }
+    100%    { -ms-transform: translate(0px, -115px) rotate(0deg) scale(1.0); }
+}
+@-ms-keyframes float {
+    0%      { -ms-transform: translate(0px, -115px) rotate(0deg); }
+    33%     { -ms-transform: translate(-5px, -110px) rotate(1deg); }
+    66%     { -ms-transform: translate(5px, -115px) rotate(-1deg); }
+    100%    { -ms-transform: translate(0px, -110px) rotate(0deg); }
+}
+@-o-keyframes waveroll {
+    0%      { -o-transform: translate(0px, 0px) rotate(0deg); }
+    12%     { -o-transform: translate(-2px, -1px) rotate(1deg); }
+    25%     { -o-transform: translate(-3px, 0px) rotate(0deg); }
+    37%     { -o-transform: translate(-2px, 1px) rotate(-1deg); }
+    50%     { -o-transform: translate(0px, 0px) rotate(-1deg); }
+    62%     { -o-transform: translate(2px, -1px) rotate(-1deg); }
+    75%     { -o-transform: translate(3px, 0px) rotate(0deg); }
+    87%     { -o-transform: translate(2px, 1px) rotate(1deg); }
+    100%    { -o-transform: translate(0px, 0px) rotate(0deg); }
+}
+@-o-keyframes submerge {
+    0%      { -o-transform: translate(0px, 100px) rotate(45deg) scale(0.5); }
+    15%     { -o-transform: translate(0px, -125px) rotate(-1deg) scale(1.03); }
+    35%     { -o-transform: translate(0px, -110px) rotate(2deg) scale(0.99); }
+    66%     { -o-transform: translate(0px, -117px) rotate(0deg) scale(1.01); }
+    100%    { -o-transform: translate(0px, -115px) rotate(0deg) scale(1.0); }
+}
+@-o-keyframes float {
+    0%      { -o-transform: translate(0px, -115px) rotate(0deg); }
+    33%     { -o-transform: translate(-5px, -110px) rotate(1deg); }
+    66%     { -o-transform: translate(5px, -115px) rotate(-1deg); }
+    100%    { -o-transform: translate(0px, -110px) rotate(0deg); }
+}
+@keyframes waveroll {
+    0%      { transform: translate(0px, 0px) rotate(0deg); }
+    12%     { transform: translate(-1px, -1px) rotate(1deg); }
+    25%     { transform: translate(-3px, 0px) rotate(0deg); }
+    37%     { transform: translate(-2px, 1px) rotate(-1deg); }
+    50%     { transform: translate(0px, 0px) rotate(-1deg); }
+    62%     { transform: translate(2px, -1px) rotate(-1deg); }
+    75%     { transform: translate(3px, 0px) rotate(0deg); }
+    87%     { transform: translate(2px, 1px) rotate(1deg); }
+    100%    { transform: translate(0px, 0px) rotate(0deg); }
+}
+@keyframes submerge {
+    0%      { transform: translate(0px, 100px) rotate(45deg) scale(0.5); }
+    15%     { transform: translate(0px, -125px) rotate(-1deg) scale(1.03); }
+    35%     { transform: translate(0px, -110px) rotate(2deg) scale(0.99); }
+    66%     { transform: translate(0px, -117px) rotate(0deg) scale(1.01); }
+    100%    { transform: translate(0px, -115px) rotate(0deg) scale(1.0); }
+}
+@keyframes float {
+    0%      { transform: translate(0px, -115px) rotate(0deg); }
+    33%     { transform: translate(-5px, -110px) rotate(1deg); }
+    66%     { transform: translate(5px, -115px) rotate(-1deg); }
+    100%    { transform: translate(0px, -110px) rotate(0deg); }
+}
+    </style>
 </head>
-
 <body>
-  <a href="https://github.com/ishmaelx/syre"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/ishmaelx/syre/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/ishmaelx/syre/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+    <div id="container">
+        <h1 id="message"><span class="capsule">V<sup>4</sup>Lt<sub>3</sub>Cß<sup>3</sup></span></h1>
+        <div id="wave_one" class="wave"></div>
+        <div id="wave_two" class="wave"></div>
+        <div id="wave_three" class="wave"></div>
     </div>
-
-    <h1><a href="https://github.com/ishmaelx/syre">syre</a>
-      <span class="small">by <a href="https://github.com/ishmaelx">ishmaelx</a></span></h1>
-
-    <div class="description">
-      CSS animation test
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Tobias Busch Carlsen<br/>      </p>
-    
-
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/ishmaelx/syre/zipball/master">zip</a> or
-      <a href="https://github.com/ishmaelx/syre/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/ishmaelx/syre</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/ishmaelx/syre">ishmaelx/syre</a>
-    </div>
-
-  </div>
-
 </body>
 </html>
