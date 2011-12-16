@@ -1,0 +1,47 @@
+*** syre.html - a simple CSS3 animation test ***
+
+Purpose: to test how some of the CSS level 3 properties behave in different
+browsers and experiment with degradation in older browsers. Please note, that
+this is not meant to be an exhaustive or even comprehensive test-suite. The
+properties I am poking at are:
+
+	animation
+	@keyframes
+	transform: translate rotate scale
+	background (-image: gradient)
+	opacity
+	box-shadow
+	text-shadow
+
+TODO:
+
+	* Font ?
+	* box-reflect ?
+	* Look at positioning and overall width/height/scale
+	* Expand gradients
+	* Rework degradation; IE6 should degrade to a grey page with a z-index hack
+
+
+<legalese>
+
+Copyright (C) 2011 Tobias Busch Carlsen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+</legalese>
